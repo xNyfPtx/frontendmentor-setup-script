@@ -25,4 +25,4 @@ jq 'del(.scripts.test)' package.json > tmp.json && mv tmp.json package.json
 jq '.scripts += {"start": "npx parcel src/index.html"}' package.json > tmp.json && mv tmp.json package.json
 jq '.scripts += {"tailwind-start": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"}' package.json > tmp.json && mv tmp.json package.json
 jq '.scripts += {"build": "npx parcel build src/index.html"}' package.json > tmp.json && mv tmp.json package.json
-jq '.scripts += {"tailwind-start": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --build"}' package.json > tmp.json && mv tmp.json package.json
+jq '.scripts += {"tailwind-build": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --build"}' package.json > tmp.json && mv tmp.json package.json
